@@ -59,7 +59,7 @@
     target.innerHTML = `
       <div class="header-inner">
         <a class="brand" href="#atlas" aria-label="${e(content.site.name)} 처음으로">
-          <img src="../resource/sclab%20로고.png" alt="${e(content.site.shortName)}" />
+          <img src="../../resource/sclab%20로고.png" alt="${e(content.site.shortName)}" />
           <span class="brand-edition"><span>Smart Computing Lab</span><span>Konkuk University</span></span>
         </a>
         <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
@@ -268,7 +268,7 @@
         <div class="professor-poster" data-reveal>
           <div class="poster-top">
             <span class="eyebrow">Director / Profile No. 01</span>
-            <img src="../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${e(content.site.university)} 로고" />
+            <img src="../../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${e(content.site.university)} 로고" />
           </div>
           <p class="poster-name" aria-hidden="true">${nameParts.map((part) => `<span>${e(part)}</span>`).join("")}</p>
           <div class="poster-role"><span>${e(professor.role)}</span><span>${e(professor.researchArea)}</span></div>
@@ -377,8 +377,8 @@
     target.innerHTML = `
       <div class="footer-inner">
         <div class="footer-brand footer-brand-logos">
-          <img src="../resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="${e(content.site.name)}" />
-          <img src="../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${e(content.site.university)}" />
+          <img src="../../resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="${e(content.site.name)}" />
+          <img src="../../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${e(content.site.university)}" />
         </div>
         <div class="footer-meta">
           <p>© <span data-current-year></span> ${e(content.site.name)}</p>

@@ -200,7 +200,7 @@
 
     target.innerHTML = `
       <div class="professor-identity">
-        <img class="professor-ku-logo" src="../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${esc(content.site.university)} 로고" />
+        <img class="professor-ku-logo" src="../../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${esc(content.site.university)} 로고" />
         <div class="identity-axis" aria-hidden="true"></div>
         <div class="identity-name">
           <h3>${esc(professor.nameKo)}<span>${esc(professor.nameEn)} · ${esc(professor.role)}</span></h3>
@@ -334,8 +334,8 @@
     target.innerHTML = `
       <div class="footer-top">
         <div class="footer-brand footer-logo-lockup">
-          <img src="../resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="${esc(content.site.name)}" />
-          <img src="../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${esc(content.site.university)}" />
+          <img src="../../resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="${esc(content.site.name)}" />
+          <img src="../../resource/%EA%B1%B4%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A1%9C%EA%B3%A0.jpg" alt="${esc(content.site.university)}" />
           <span>${esc(content.site.university)} · ${esc(content.site.location)}</span>
         </div>
         <nav class="footer-nav" aria-label="출처 및 보조 메뉴">
