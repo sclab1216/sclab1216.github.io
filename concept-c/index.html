@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b4da2" />
+    <meta name="description" content="건국대학교 Smart Computing Laboratory 공식 홈페이지 시안" />
+    <title>SCLab | Konkuk University</title>
+    <link rel="stylesheet" href="../shared/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./compact.css" />
+    <link rel="stylesheet" href="./sticky.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 이동</a>
+
+    <header class="site-header">
+      <div class="university-bar">
+        <span>KONKUK UNIVERSITY</span>
+        <span>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</span>
+      </div>
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="SCLab 홈">
+          <img src="../resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="Smart Computing Laboratory" />
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="주요 메뉴">
+          <a href="#research">Research</a><a href="#publications">Publications</a>
+          <a href="#professor">Professor</a><a href="#people">People</a><a href="#join">Join Us</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">메뉴 열기</span><i></i><i></i><i></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <p class="kicker">SMART COMPUTING LABORATORY · KONKUK UNIVERSITY</p>
+            <h1>시간에 따라 변하는<br /><em>연결과 지식</em>을 연구합니다.</h1>
+            <div class="hero-actions"><a class="button button-white" href="#research">연구 분야 보기</a><a class="button button-ghost" href="#join">연구실 지원</a></div>
+          </div>
+
+          <div class="lab-demo" aria-labelledby="demo-title">
+            <div class="demo-head"><div><span>CTDG / TKG / ONTOLOGY</span><strong id="demo-title">Temporal Graph</strong></div></div>
+            <div class="demo-stage">
+              <svg viewBox="0 0 660 430" role="img" aria-label="시간에 따라 관계가 변하는 연구 그래프">
+                <defs><pattern id="blueGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8db5e8" stroke-opacity=".16" /></pattern></defs>
+                <rect width="660" height="430" fill="url(#blueGrid)" />
+                <g class="demo-edges" data-demo-edges></g><g class="demo-nodes" data-demo-nodes></g>
+              </svg>
+              <div class="demo-readout" aria-live="polite"><span data-demo-code>01 / CTDG</span><strong data-demo-title>연속 시간 동적 그래프</strong><p data-demo-copy></p></div>
+            </div>
+            <div class="demo-controls"><div class="demo-tabs" data-demo-tabs></div><label><span>t</span><input data-demo-time type="range" min="0" max="3" value="0" step="1" /></label></div>
+          </div>
+        </div>
+        <a class="latest-news" data-latest-news href="#publications"><span>LATEST NEWS</span><strong></strong><time></time><i>→</i></a>
+      </section>
+
+      <section class="research section-shell" id="research">
+        <div class="section-heading"><div class="section-label"><span>RESEARCH</span><span>01</span></div><h2>Research Areas</h2></div>
+        <div class="research-grid" data-research-grid></div>
+      </section>
+
+      <section class="publication-section" id="publications">
+        <div class="section-shell"><div class="section-heading inverse"><div class="section-label"><span>PUBLICATIONS & NEWS</span><span>02</span></div><h2>Research Highlights</h2></div><div class="publication-layout"><div data-featured-paper></div><div class="publication-list" data-publication-list></div></div></div>
+      </section>
+
+      <section class="professor section-shell" id="professor">
+        <div class="section-label"><span>LABORATORY DIRECTOR</span><span>03</span></div>
+        <div class="professor-layout" data-professor></div>
+      </section>
+
+      <section class="people section-shell" id="people">
+        <div class="section-heading"><div class="section-label"><span>PEOPLE</span><span>04</span></div><h2>Our Members</h2></div>
+        <div class="people-groups" data-people></div>
+      </section>
+
+      <section class="join" id="join"><div class="section-shell join-layout" data-join></div></section>
+    </main>
+
+    <footer class="site-footer" data-footer></footer>
+    <script src="../data/content.js"></script><script src="../shared/shared.js"></script><script src="./app.js"></script>
+  </body>
+</html>

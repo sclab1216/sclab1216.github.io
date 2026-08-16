@@ -1,0 +1,13 @@
+.research-card {
+  min-height: 300px;
+}
+
+.research-card h3 {
+  margin-top: 34px;
+}
+
+@media (max-width: 620px) {
+  .research-card {
+    min-height: 270px;
+  }
+}

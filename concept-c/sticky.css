@@ -1,0 +1,45 @@
+/* The hero becomes a pinned research story instead of scrolling out of view. */
+.hero {
+  overflow: visible;
+}
+
+.hero-shell {
+  min-height: 190svh;
+  align-items: start;
+}
+
+.hero-copy,
+.lab-demo {
+  position: sticky;
+  top: 145px;
+  align-self: start;
+}
+
+.latest-news {
+  position: absolute;
+}
+
+@media (max-width: 980px) {
+  .hero-shell {
+    min-height: 220svh;
+  }
+
+  .hero-copy {
+    position: relative;
+    top: auto;
+  }
+
+  .lab-demo {
+    top: 128px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-shell {
+    min-height: 235svh;
+  }
+
+  .lab-demo {
+    top: 112px;
+  }
+}

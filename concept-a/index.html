@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="건국대학교 Smart Computing Laboratory — 시간에 따라 변하는 사건과 관계를 연구하는 지능형 컴퓨팅 연구실"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>SCLab — Temporal Observatory</title>
+    <link rel="stylesheet" href="../shared/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 이동</a>
+
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+
+    <header class="site-header" data-site-header>
+      <a class="brand" href="#top" aria-label="SCLab 홈페이지 처음으로">
+        <span class="brand-logo-frame"><img src="../resource/sclab%20로고.png" alt="" /></span>
+        <span class="brand-copy">
+          <strong>Smart Computing Laboratory</strong>
+          <small>Konkuk University</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">메뉴 열기</span>
+        <i></i><i></i>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="주요 메뉴">
+        <a href="#research">Research</a>
+        <a href="#signals">Signals</a>
+        <a href="#professor">Professor</a>
+        <a href="#people">People</a>
+        <a href="#join">Join</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy" data-hero-copy></div>
+
+        <div class="observatory" data-observatory data-reveal>
+          <div class="observatory-head">
+            <div>
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>CTDG</span>
+            </div>
+            <span>t / 12.0</span>
+          </div>
+
+          <div class="graph-stage">
+            <svg
+              class="temporal-graph"
+              data-temporal-graph
+              viewBox="0 0 960 540"
+              role="img"
+              aria-labelledby="graph-title graph-description"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <title id="graph-title">연속 시간 동적 그래프 인터랙티브 시뮬레이션</title>
+              <desc id="graph-description">
+                페이지를 스크롤하면 개체 사이의 연결 사건이 시간 순서대로 나타납니다.
+              </desc>
+              <defs>
+                <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#d9eaff" stop-opacity="0.96" />
+                  <stop offset="55%" stop-color="#5f9eff" stop-opacity="0.42" />
+                  <stop offset="100%" stop-color="#5f9eff" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="edgeGradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#3564a8" />
+                  <stop offset="50%" stop-color="#9cc7ff" />
+                  <stop offset="100%" stop-color="#3564a8" />
+                </linearGradient>
+                <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+                  <feGaussianBlur stdDeviation="8" />
+                </filter>
+                <pattern id="microGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+                  <path d="M32 0H0V32" fill="none" stroke="#cbe0ff" stroke-opacity="0.075" />
+                </pattern>
+              </defs>
+              <rect width="960" height="540" fill="url(#microGrid)"></rect>
+              <g class="graph-rings" aria-hidden="true">
+                <circle cx="480" cy="270" r="92"></circle>
+                <circle cx="480" cy="270" r="184"></circle>
+                <circle cx="480" cy="270" r="258"></circle>
+                <path d="M60 270H900M480 32V508"></path>
+              </g>
+              <g data-graph-edges></g>
+              <g data-graph-pulses></g>
+              <g data-graph-nodes></g>
+            </svg>
+
+            <div class="graph-coordinate coordinate-x" aria-hidden="true">X / RELATION</div>
+            <div class="graph-coordinate coordinate-y" aria-hidden="true">Y / ENTITY</div>
+            <div class="graph-time" aria-hidden="true">
+              <span>T</span><strong data-graph-time>00.0</strong><small>SEC</small>
+            </div>
+
+            <div class="event-readout" aria-live="polite" aria-atomic="true">
+              <span class="readout-index" data-event-index>EVENT 00 / 12</span>
+              <strong data-event-title>READY</strong>
+            </div>
+          </div>
+
+          <div class="timeline-control">
+            <div class="scroll-sync-label" aria-hidden="true">
+              <span class="scroll-sync-icon">↓</span>
+              <span><strong>SCROLL</strong></span>
+            </div>
+            <div class="timeline-track">
+              <label class="sr-only" for="temporal-range">그래프 관측 시간</label>
+              <input
+                id="temporal-range"
+                data-temporal-range
+                type="range"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+              />
+              <div class="timeline-scale" aria-hidden="true">
+                <span>00.0</span><span>04.0</span><span>08.0</span><span>12.0</span>
+              </div>
+            </div>
+            <div class="timeline-mode">
+              <strong>t</strong>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#research">
+          <span>Explore the work</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="section research-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading" data-research-heading data-reveal></div>
+        <div class="research-console" data-research-console data-reveal>
+          <div class="research-tabs" role="tablist" aria-label="연구 분야" data-research-tabs></div>
+          <div class="research-panel" data-research-panel></div>
+        </div>
+      </section>
+
+      <section class="section signals-section" id="signals" aria-labelledby="signals-title">
+        <div class="section-heading split-heading" data-signals-heading data-reveal></div>
+        <div class="signal-layout" data-signal-layout></div>
+      </section>
+
+      <section class="section professor-section" id="professor" aria-labelledby="professor-title">
+        <div class="professor-orbit" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <div class="professor-layout" data-professor-layout></div>
+      </section>
+
+      <section class="section people-section" id="people" aria-labelledby="people-title">
+        <div class="section-heading people-heading" data-people-heading data-reveal></div>
+        <div class="member-filters" role="toolbar" aria-label="구성원 과정 필터" data-member-filters></div>
+        <div class="member-grid" data-member-grid aria-live="polite"></div>
+      </section>
+
+      <section class="section join-section" id="join" aria-labelledby="join-title">
+        <div class="join-layout" data-join-layout></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+
+    <noscript>
+      <div class="noscript-message">
+        이 시안은 연구 데이터와 인터랙션을 표시하기 위해 JavaScript가 필요합니다.
+      </div>
+    </noscript>
+
+    <script src="../data/content.js"></script>
+    <script src="../shared/shared.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
