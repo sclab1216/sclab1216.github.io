@@ -22,7 +22,7 @@
 
   $("[data-vision]").innerHTML = `<div class="vision-index"><span>01</span><p>RESEARCH VISION</p></div><div class="vision-statement"><p>WHY WE RESEARCH</p><h2>${e(c.site.taglineEn)}</h2></div><div class="vision-notes"><strong>${e(c.site.taglineKo)}</strong><p>${e(c.site.description)}</p><ul>${c.professor.keywords.map((x) => `<li>${e(x)}</li>`).join("")}</ul></div>`;
 
-  $("[data-research-grid]").innerHTML = c.research.map((r) => `<a class="research-entry" href="#${e(r.id)}" id="${e(r.id)}"><span class="topic-number">${e(r.code.slice(0, 2))}</span><div class="topic-title"><small>${e(r.id.toUpperCase())}</small><h3>${e(r.titleEn)}</h3><em>${e(r.titleKo)}</em></div><div class="topic-copy"><strong>${e(r.short)}</strong><p>${e(r.description)}</p></div><i>↘</i></a>`).join("");
+  $("[data-research-grid]").innerHTML = c.research.map((r) => `<a class="research-entry" href="./research.html#${e(r.id)}" id="${e(r.id)}"><span class="topic-number">${e(r.code.slice(0, 2))}</span><div class="topic-title"><small>${e(r.id.toUpperCase())}</small><h3>${e(r.titleEn)}</h3><em>${e(r.titleKo)}</em></div><div class="topic-copy"><strong>${e(r.short)}</strong><p>${e(r.description)}</p></div><i>↗</i></a>`).join("");
 
   $("[data-publication-count]").textContent = `${c.publications.length} PAPERS / ${new Set(c.publications.map((p) => p.year)).size} YEARS`;
   const featured = c.publications[0];

@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="./compact.css" />
     <link rel="stylesheet" href="./sticky.css" />
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#main">본문으로 이동</a>
     <header class="site-header"><div class="header-inner">
-      <a class="brand" href="#top" aria-label="SCLab 홈"><img src="./resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="Smart Computing Laboratory" /></a>
+      <a class="brand" href="./index.html" aria-label="SCLab 홈"><img src="./resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="Smart Computing Laboratory" /></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span>MENU</span><i></i><i></i></button>
       <nav class="main-nav" id="main-nav" aria-label="주요 메뉴">
-        <div class="nav-item"><a href="#people">PEOPLE</a><div class="nav-panel"><a href="#professor">Professor</a><a href="#members">Members</a></div></div>
-        <div class="nav-item"><a href="#vision">RESEARCH</a><div class="nav-panel"><a href="#vision">Research Vision</a><a href="#research">Research Topics</a></div></div>
-        <div class="nav-item"><a href="#publications">PUBLICATIONS</a><div class="nav-panel"><a href="#publications">Papers</a></div></div>
-        <div class="nav-item"><a href="#board">BOARD</a><div class="nav-panel"><a href="#news">News</a><a href="#seminar">Seminar</a><a href="#gallery">Gallery</a></div></div>
+        <div class="nav-item"><a href="./people.html">PEOPLE</a><div class="nav-panel"><a href="./people.html#professor">Professor</a><a href="./people.html#members">Members</a></div></div>
+        <div class="nav-item"><a href="./research.html">RESEARCH</a><div class="nav-panel"><a href="./research.html#vision">Research Vision</a><a href="./research.html#research">Research Topics</a></div></div>
+        <div class="nav-item"><a href="./publications.html">PUBLICATIONS</a><div class="nav-panel"><a href="./publications.html#publications">Papers</a></div></div>
+        <div class="nav-item"><a href="./board.html">BOARD</a><div class="nav-panel"><a href="./board.html#news">News</a><a href="./board.html#seminar">Seminar</a><a href="./board.html#gallery">Gallery</a></div></div>
         <div class="nav-item"><a href="#contact">CONTACT</a><div class="nav-panel"><a href="#join">Join Us</a><a href="#location">Location</a></div></div>
       </nav>
     </div></header>
@@ -32,7 +32,7 @@
             <p class="eyebrow">KONKUK UNIVERSITY<br />DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
             <div class="hero-title"><span>SCLab</span><h1>SMART COMPUTING<br />LABORATORY</h1></div>
             <p class="hero-tagline" data-hero-tagline></p><p class="hero-description" data-hero-description></p>
-            <a class="text-link light" href="#research">EXPLORE RESEARCH <span>↘</span></a>
+            <a class="text-link light" href="./research.html">EXPLORE RESEARCH <span>↗</span></a>
           </div>
           <div class="hero-graph" aria-label="Continuous-Time Dynamic Graph visualization">
             <div class="graph-head"><span>LIVE RESEARCH MODEL</span><strong data-demo-title>연속 시간 동적 그래프</strong><em>CTDG / 01—04</em></div>
@@ -43,16 +43,14 @@
         <a class="latest-news" data-latest-news href="#news"><span>NEW / <b>LAB UPDATE</b></span><strong></strong><time></time><i>↗</i></a>
       </section>
 
-      <section class="about section-shell" id="about" data-about></section>
-      <section class="research-block" id="vision"><div class="section-shell vision" data-vision></div>
-        <div class="section-shell research" id="research"><div class="section-heading"><p>02 / RESEARCH TOPICS</p><h2>What we<br />research.</h2><span>FOUR CORE AREAS</span></div><div class="research-list" data-research-grid></div></div>
-      </section>
       <section class="publications" id="publications"><div class="section-shell"><div class="section-heading inverse"><p>03 / LATEST PUBLICATIONS</p><h2>Selected<br />research.</h2><span data-publication-count></span></div><div class="publication-layout" data-publication-list></div></div></section>
       <section class="board section-shell" id="board"><div class="section-heading"><p>04 / BOARD</p><h2>Life inside<br />the lab.</h2><span>NEWS & ACTIVITY</span></div><div class="board-layout">
         <div class="news-column" id="news"><div class="subhead"><h3>LATEST NEWS</h3><span>RECENT UPDATES</span></div><div class="news-feed" data-news-list></div></div>
         <aside class="activity-column"><section id="seminar"><div class="subhead"><h3>LATEST SEMINAR</h3><span>ARCHIVE</span></div><div class="empty-state"><b>SEMINAR ARCHIVE</b><p>등록된 세미나 정보가 없습니다.</p></div></section><section id="gallery"><div class="subhead"><h3>LAB GALLERY</h3><span>ARCHIVE</span></div><div class="gallery-placeholder"><span>SCLab</span><p>등록된 갤러리 이미지가 없습니다.</p></div></section></aside>
       </div></section>
-      <section class="people" id="people"><div class="section-shell"><div class="section-heading"><p>05 / PEOPLE</p><h2>The people<br />behind SCLab.</h2><span>FACULTY & RESEARCHERS</span></div><div class="professor-profile" id="professor" data-professor></div><div class="member-directory" id="members" data-people></div></div></section>
+      <section class="about section-shell" id="about" data-about></section>
+      <section class="research-block" id="vision"><div class="section-shell vision" data-vision></div><div class="section-shell research" id="research"><div class="section-heading"><p>02 / RESEARCH TOPICS</p><h2>What we<br />research.</h2><span>FOUR CORE AREAS</span></div><div class="research-list" data-research-grid></div></div></section>
+      <section class="people" id="people" hidden><div class="section-shell"><div data-professor></div><div data-people></div></div></section>
       <section class="join" id="join"><div class="section-shell join-layout" data-join></div></section>
       <section class="contact section-shell" id="contact"><div id="location" data-contact></div></section>
     </main>
