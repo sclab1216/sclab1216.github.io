@@ -1,4 +1,1 @@
-@media (min-width: 901px) {
-  .hero { min-height: 130svh; }
-  .hero-graph { position: sticky; top: 118px; }
-}
+/* Sticky header and scroll-linked hero behavior are defined in style.css and app.js. */

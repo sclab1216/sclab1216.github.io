@@ -1,17 +1,1 @@
-/* Layout-specific refinements are contained in style.css. */
-.about h2 em { display: block; margin-top: 18px; color: var(--blue); font-size: 20px; font-style: normal; font-weight: 650; letter-spacing: -.03em; }
-.contact address small { display: block; margin-top: 8px; color: var(--muted); font-size: 10px; line-height: 1.5; }
-.news-entry time small { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; font-weight: 600; }
-.nav-item { position: relative; }
-.nav-panel { position: absolute; top: calc(100% + 25px); left: -15px; display: grid; min-width: 155px; padding: 14px 15px; gap: 8px; background: #fff; border: 1px solid var(--line); box-shadow: 0 12px 25px rgba(8,44,97,.1); opacity: 0; pointer-events: none; transform: translateY(-5px); transition: opacity .18s, transform .18s; }
-.nav-item:hover .nav-panel, .nav-item:focus-within .nav-panel { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.nav-panel a { color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 0; text-decoration: none; }
-.nav-panel a:hover { color: var(--blue); }
-.vision { width: auto; padding-right: max(40px,calc((100% - 1280px)/2)); padding-left: max(40px,calc((100% - 1280px)/2)); background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.vision-layout { display: grid; grid-template-columns: 1fr .85fr; gap: 10vw; }
-.vision h2 { margin-top: 15px; font-size: clamp(38px,4.3vw,64px); line-height: 1.06; letter-spacing: -.06em; }
-.vision-layout > div:last-child { color: var(--muted); font-size: 17px; word-break: keep-all; }
-.vision ul { display: flex; margin-top: 26px; flex-wrap: wrap; gap: 7px; }
-.vision li { padding: 5px 8px; border: 1px solid #b6cde7; color: var(--blue); font-size: 10px; font-weight: 700; }
-@media(max-width:900px){.nav-panel{position:static;display:none;min-width:0;padding:8px 0;border:0;box-shadow:none;opacity:1;pointer-events:auto;transform:none}.nav-item:focus-within .nav-panel,.nav-item:hover .nav-panel{display:grid}.vision{padding-right:24px;padding-left:24px}.vision-layout{grid-template-columns:1fr;gap:30px}}
-@media(max-width:600px){.vision{padding:78px 16px}.vision-layout>div:last-child{font-size:15px}}
+/* Responsive layout is consolidated in style.css. */
