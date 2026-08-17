@@ -1,57 +1,7 @@
-.research-card {
-  min-height: 300px;
-}
+/* Intentional final refinements. Core visual rules live in style.css. */
+.main-nav a.is-active { color: var(--blue); }
+.main-nav a.is-active:after { transform: scaleX(1); }
 
-.research-card h3 {
-  margin-top: 34px;
-}
-
-.lab-demo {
-  overflow: hidden;
-  border: 0;
-  border-radius: 18px;
-  background: transparent;
-  box-shadow: 0 24px 70px rgba(5, 30, 69, 0.22);
-}
-
-.demo-stage {
-  aspect-ratio: 1.28;
-  background: #0b4da2;
-}
-
-.demo-readout {
-  right: auto;
-  bottom: 24px;
-  left: 28px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.demo-readout strong {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 15px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-.demo-node circle:first-child {
-  fill: #f7fbff;
-  stroke: rgba(255, 255, 255, 0.72);
-}
-
-.demo-node circle:last-child {
-  stroke: rgba(187, 216, 251, 0.46);
-}
-
-.demo-node text {
-  fill: #0b4da2;
-  font-size: 9px;
-}
-
-@media (max-width: 620px) {
-  .research-card {
-    min-height: 270px;
-  }
+@media (min-width: 981px) {
+  .lab-demo { border-radius: 3px; }
 }
