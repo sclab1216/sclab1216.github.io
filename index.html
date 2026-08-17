@@ -13,80 +13,48 @@
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 이동</a>
-
     <header class="site-header">
-      <div class="university-bar">
-        <span>KONKUK UNIVERSITY</span>
-        <span>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</span>
-      </div>
-      <div class="nav-shell">
-        <a class="brand" href="#top" aria-label="SCLab 홈">
-          <img src="./resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="Smart Computing Laboratory" />
-        </a>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="SCLab 홈"><img src="./resource/sclab%20%EB%A1%9C%EA%B3%A0.png" alt="Smart Computing Laboratory" /></a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">메뉴 열기</span><i></i><i></i><i></i></button>
         <nav class="main-nav" id="main-nav" aria-label="주요 메뉴">
-          <a href="#people">People</a><a href="#research">Research</a>
-          <a href="#publications">Publications</a><a href="#news">Board</a><a href="#contact">Contact</a>
+          <a href="#people"><span>PEOPLE</span><small>Professor & Members</small></a>
+          <a href="#research"><span>RESEARCH</span><small>Vision & Topics</small></a>
+          <a href="#publications"><span>PUBLICATIONS</span><small>Selected Papers</small></a>
+          <a href="#board"><span>BOARD</span><small>News · Seminar · Gallery</small></a>
+          <a href="#contact"><span>CONTACT</span><small>Join & Location</small></a>
         </nav>
-        <div class="nav-actions">
-          <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">메뉴 열기</span><i></i><i></i><i></i></button>
-        </div>
       </div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-shell">
+        <div class="hero-layout">
           <div class="hero-copy">
-            <p class="kicker">SMART COMPUTING LABORATORY · KONKUK UNIVERSITY</p>
-            <h1>시간에 따라 변하는<br /><em>연결과 지식</em>을 연구합니다.</h1>
-            <div class="hero-actions"><a class="button button-white" href="#research">연구 분야 보기</a><a class="button button-ghost" href="#join">연구실 지원</a></div>
+            <p class="eyebrow">KONKUK UNIVERSITY · DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
+            <p class="hero-lab-name">SCLab</p>
+            <h1>SMART COMPUTING<br />LABORATORY</h1>
+            <p class="hero-tagline" data-hero-tagline></p>
+            <p class="hero-description" data-hero-description></p>
+            <a class="hero-link" href="#research">Explore our research <span>↓</span></a>
           </div>
-
-          <div class="lab-demo">
-            <div class="demo-stage">
-              <svg viewBox="0 0 660 430" role="img" aria-label="시간에 따라 관계가 변하는 연구 그래프">
-                <defs><pattern id="blueGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8db5e8" stroke-opacity=".16" /></pattern></defs>
-                <rect width="660" height="430" fill="url(#blueGrid)" />
-                <g class="demo-edges" data-demo-edges></g><g class="demo-nodes" data-demo-nodes></g>
-              </svg>
-              <div class="demo-readout" aria-live="polite"><strong data-demo-title>연속 시간 동적 그래프</strong></div>
-            </div>
+          <div class="hero-graph" aria-label="Continuous-Time Dynamic Graph visualization">
+            <div class="graph-caption"><span>LIVE RESEARCH MODEL</span><strong data-demo-title>연속 시간 동적 그래프</strong></div>
+            <svg viewBox="0 0 660 430" role="img" aria-label="시간에 따라 관계가 변하는 연구 그래프"><defs><pattern id="blueGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8db5e8" stroke-opacity=".16" /></pattern></defs><rect width="660" height="430" fill="url(#blueGrid)" /><g class="demo-edges" data-demo-edges></g><g class="demo-nodes" data-demo-nodes></g></svg>
           </div>
         </div>
-        <a class="latest-news" data-latest-news href="#publications"><span>LATEST NEWS</span><strong></strong><time></time><i>→</i></a>
+        <a class="latest-news" data-latest-news href="#board"><span>LATEST NEWS</span><strong></strong><time></time><i>↗</i></a>
       </section>
 
-      <section class="about section-shell" id="about" data-about></section>
-
-      <section class="research section-shell" id="research">
-        <div class="section-heading"><div class="section-label"><span>RESEARCH</span><span>01</span></div><h2>Research Areas</h2></div>
-        <div class="research-grid" data-research-grid></div>
-      </section>
-
-      <section class="publication-section" id="publications">
-        <div class="section-shell"><div class="section-heading inverse"><div class="section-label"><span>SELECTED PUBLICATIONS</span><span>02</span></div><h2>Research<br />Highlights</h2><p>Ideas and systems that turn evolving data into knowledge for real-world decisions.</p></div><div class="publication-layout"><div data-featured-paper></div><div class="publication-list" data-publication-list></div></div></div>
-      </section>
-
-      <section class="news section-shell" id="news">
-        <div class="section-heading"><div class="section-label"><span>LABORATORY NEWS</span><span>03</span></div><h2>What’s happening<br />at SCLab</h2><p>Recent research milestones, publications, and updates from our laboratory.</p></div>
-        <div class="news-list" data-news-list></div>
-      </section>
-
-      <section class="professor section-shell" id="professor">
-        <div class="section-label"><span>LABORATORY DIRECTOR</span><span>04</span></div>
-        <div class="professor-layout" data-professor></div>
-      </section>
-
-      <section class="people section-shell" id="people">
-        <div class="section-heading"><div class="section-label"><span>PEOPLE</span><span>05</span></div><h2>Our Members</h2></div>
-        <div class="people-groups" data-people></div>
-      </section>
-
-      <section class="join" id="join"><div class="section-shell join-layout" data-join></div></section>
-      <section class="contact section-shell" id="contact" data-contact></section>
+      <section class="about page-section" id="about" data-about></section>
+      <section class="research page-section" id="research"><div class="section-intro"><p class="section-index">01</p><div><p class="eyebrow">RESEARCH TOPICS</p><h2>Explore our<br />research.</h2></div></div><div class="research-list" data-research-grid></div></section>
+      <section class="publications page-section" id="publications"><div class="section-intro"><p class="section-index">02</p><div><p class="eyebrow">PUBLICATIONS</p><h2>Research<br />archive.</h2></div></div><div class="publication-archive" data-publication-list></div></section>
+      <section class="people page-section" id="people"><div class="section-intro"><p class="section-index">03</p><div><p class="eyebrow">PEOPLE</p><h2>Our people.</h2></div></div><div class="professor-profile" data-professor></div><div class="member-directory" data-people></div></section>
+      <section class="board page-section" id="board"><div class="section-intro"><p class="section-index">04</p><div><p class="eyebrow">BOARD</p><h2>From the lab.</h2></div></div><div class="board-layout"><div><h3>NEWS</h3><div class="news-feed" data-news-list></div></div><aside class="board-empty"><section><h3>SEMINAR</h3></section><section><h3>GALLERY</h3></section></aside></div></section>
+      <section class="join" id="join"><div class="join-layout" data-join></div></section>
+      <section class="contact page-section" id="contact" data-contact></section>
     </main>
-
     <footer class="site-footer" data-footer></footer>
     <script src="./data/content.js"></script><script src="./shared/shared.js"></script><script src="./app.js"></script>
   </body>
